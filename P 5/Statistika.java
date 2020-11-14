@@ -7,7 +7,7 @@ class Statistika{
     // }
 
     int mean(){
-
+        
     }
 
      
