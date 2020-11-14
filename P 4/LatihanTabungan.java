@@ -1,19 +1,31 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+@SuppressWarnings("unchecked")
 
 public class LatihanTabungan{
 
         public static void main(String args []){
-            int tawal,tambahTabungan,kurangTabungan,hasiltambah,hasilkurang;
+            int tawal,tambahTabungan,kurangTabungan,hasiltambah,hasilkurang,hasilArrayTambah;
             String nama,pilihan;
             Scanner scan = new Scanner(System.in);
 
+            ArrayList ArrayTabungan = new ArrayList();
+            // ArrayTabungan.add("aziz");
+            // ArrayTabungan.add(100000);
+
             System.out.print("Masukan Nama Anda : ");
             nama = scan.nextLine();
+            ArrayTabungan.add(nama);
 
             System.out.print("Masukan Tabungan Anda : ");
             tawal = scan.nextInt();
+            ArrayTabungan.add(tawal);
             scan.nextLine();
+
+            // System.out.println(ArrayTabungan);
+            // System.out.println(ArrayTabungan.remove(1));
+            // System.out.println(ArrayTabungan.add(15000));
+            // System.out.println(ArrayTabungan);
 
             System.out.println("Mau Melakukan Transaksi ?");
             System.out.println("A. tulis 'tambah' untuk melakukan menambah tabungan");
@@ -26,7 +38,9 @@ public class LatihanTabungan{
                     System.out.println("Masukan Nominal : ");
                     tambahTabungan = scan.nextInt();
                     hasiltambah = pertambahan(tawal,tambahTabungan);
-                    System.out.println("Tabungan Anda Bertambah : "+hasiltambah);
+                    ArrayTabungan.remove(1);
+                    ArrayTabungan.add(hasiltambah);
+                    System.out.println("Tabungan Anda Bertambah : "+ArrayTabungan.get(1));
                     break;
                 case "kurang":
                     System.out.println("Masukan Nominal : ");
@@ -51,4 +65,5 @@ public class LatihanTabungan{
 
             return jumlah;
         }
+        
 }
