@@ -8,10 +8,7 @@ public class LatihanTabungan{
             int tawal,tambahTabungan,kurangTabungan,hasiltambah,hasilkurang,hasilArrayTambah;
             String nama,pilihan;
             Scanner scan = new Scanner(System.in);
-
             ArrayList ArrayTabungan = new ArrayList();
-            // ArrayTabungan.add("aziz");
-            // ArrayTabungan.add(100000);
 
             System.out.print("Masukan Nama Anda : ");
             nama = scan.nextLine();
@@ -21,11 +18,6 @@ public class LatihanTabungan{
             tawal = scan.nextInt();
             ArrayTabungan.add(tawal);
             scan.nextLine();
-
-            // System.out.println(ArrayTabungan);
-            // System.out.println(ArrayTabungan.remove(1));
-            // System.out.println(ArrayTabungan.add(15000));
-            // System.out.println(ArrayTabungan);
 
             System.out.println("Mau Melakukan Transaksi ?");
             System.out.println("A. tulis 'tambah' untuk melakukan menambah tabungan");
@@ -46,12 +38,14 @@ public class LatihanTabungan{
                     System.out.println("Masukan Nominal : ");
                     kurangTabungan = scan.nextInt();
                     hasilkurang = pengurangan(tawal,kurangTabungan);
-                    System.out.println("Tabungan Anda Berkurang : "+hasilkurang);
+                    ArrayTabungan.remove(1);
+                    ArrayTabungan.add(hasilkurang);
+                    System.out.println("Tabungan Anda Berkurang : "+ArrayTabungan.get(1));
                     break;
                 default:
                     System.out.println("Pilihan tidak tersedia");
                     break;
-            } 
+            }
         }
 
         public static int pertambahan(int nilai1, int nilai2){

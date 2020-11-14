@@ -26,8 +26,11 @@ class Modus {
                 nilaiModus = i;
             }
         }
+
+        
  
         System.out.println("\nModusnya : " + nilaiModus);
         System.out.println("Nilai " + nilaiModus + " muncul sebanyak " + tabelFrekuensi[nilaiModus] + " kali");
+        
     }
 }

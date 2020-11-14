@@ -10,7 +10,8 @@ class alloperation {
         System.out.println("2. menghitung nilai min dan max");
         System.out.println("3. menghitung nilai median");
         System.out.println("4. menghitung nilai rata2");
-        System.out.print("masukan piihan(1-4)=");int pilih=scan1.nextInt();
+        System.out.print("masukan piihan(1-4)=");
+        int pilih=scan1.nextInt();
         switch(pilih){
 
         case 1:
