@@ -1,3 +1,4 @@
+//Import ArrayList dan Scanner
 import java.util.ArrayList;
 import java.util.Scanner;
 @SuppressWarnings("unchecked")
@@ -11,15 +12,18 @@ public class Tabungan {
         ArrayList tabungan = new ArrayList();
         Scanner scan = new Scanner(System.in);
 
+        //Meminta Inputan Nama
         System.out.println("Masukan Nama Anda : ");
         nama = scan.nextLine();
         tabungan.add(nama);
 
+        //Meminta Inputan saldo Tabungan
         System.out.println("Masukan Saldo Anda : ");
         saldo = scan.nextInt();
         tabungan.add(saldo);
         scan.nextLine();
         
+        //Menampilkan menu Program
         System.out.println("");
         System.out.println("----------------------------------------------");
         System.out.println("Menu BANK Java Program");
@@ -31,6 +35,7 @@ public class Tabungan {
         System.out.println("");
         pilihan = scan.nextLine();
 
+        //Aksi ketika user memasukan piihan tambah,tarik dan keluar
         switch (pilihan.toLowerCase()){
             case "tambah":
                 System.out.println("----------------------------------------------");
