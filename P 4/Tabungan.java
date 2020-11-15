@@ -7,7 +7,7 @@ public class Tabungan {
         String nama,pilihan;
         int saldo,saldotambah,saldokurang,tambahSaldo,tarikSaldo;
 
-        // membuat objek array list
+        // membuat objek array list & Scanner
         ArrayList tabungan = new ArrayList();
         Scanner scan = new Scanner(System.in);
 
@@ -64,12 +64,14 @@ public class Tabungan {
 
     }
 
+    //Fungsi tambah
     public static int tambah(int saldo,int tambahSaldo){
         int hasilTambah = saldo + tambahSaldo;
 
         return hasilTambah;
     }
 
+    //fungsi kurang
     public static int tarik(int saldo,int tarikSaldo){
         int hasilTarik = saldo - tarikSaldo;
 
