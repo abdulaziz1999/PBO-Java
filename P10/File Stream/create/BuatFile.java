@@ -11,7 +11,7 @@ public class BuatFile{
                 System.out.println("Nama File adalah = " + buat.getName());
             }else{
                 System.out.println("File sudah dibuat");
-            }
+            } 
 
         } catch (IOException e){
                 System.out.println("Terdapat error pada file");
