@@ -11,4 +11,4 @@ class ArithmeticException_Demo
             System.out.println ("Can't divide a number by 0"); 
         } 
     } 
-} 
+}  
