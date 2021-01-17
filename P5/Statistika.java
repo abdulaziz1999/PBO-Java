@@ -1,40 +1,18 @@
+import java.util.Scanner;
 class Statistika{
-    // int Angka1,Angka2;
+    Scanner scan =new Scanner(System.in);
 
-    // public Aritmatika(int Angka1,int Angka2){
-    //     this.Angka1 = Angka1;
-    //     this.Angka2 = Angka2;
-    // }
-    
-    int mean(int x){
-        float[]za=new float[x];
-            float jumlah=0;
+    void modus(){
+        System.out.print("masukan banyak nilai yang diinput = ");
+        int x= scan.nextInt();
 
-            for(int i=0;i<za.length;i++){
-                System.out.print("masukan nilai ke-"+(i+1)+"=");
-                za[i]=scan1.nextFloat();
-            }
-            System.out.println("\ntampilan nilai:");
-                    for(int k=0;k<za.length;k++){
-                    System.out.print(za[k]+" ;");
-                    jumlah+=za[k];
-                    }
-
-
-        //proses rata2
-        float rata2=jumlah/x;
-
-        return rata2;
-    }
-
-    int modus(int x){
         int[]a=new int[x];
              int c=a[0];
              int b=0;
             int hasil=0,besar=0;
             for(int i=0;i<a.length;i++){
                 System.out.print("masukan nilai ke-"+(i+1)+"=");
-                a[i]=scan1.nextInt();
+                a[i]=scan.nextInt();
             }
             //proses modus
             System.out.println("\n");
@@ -54,15 +32,17 @@ class Statistika{
                         System.out.println(b);
                         }
                     }
-        return hasil;
+        System.out.println("Modus = "+hasil);
     }
 
-    void median(int x){
+    void median(){
+        System.out.print("masukan banyak nilai yang diinput = ");
+        int x= scan.nextInt();
         int[]nilai=new int[x];
             //median
                 for(int i=0;i<nilai.length;i++){
                 System.out.print("masukan nilai ke-"+(i+1)+"=");
-                nilai[i]=scan1.nextInt();
+                nilai[i]=scan.nextInt();
             }
                 //proses median
                 float median=0.0f;
@@ -72,13 +52,37 @@ class Statistika{
                     System.out.println("bilangan genap");
                     median=(nilai[posisi-1]+nilai[posisi])/2;
                     System.out.printf("nilai median adalah %.2f",median);
-                    }else{
+                }else{
                     int posisi=x/2;
                     System.out.println("bilangan ganjil");
                     median=nilai[posisi];
                     System.out.print("nilai median adalah "+median);
-                    }
+                }
     }
 
-     
+    void mean(){
+        System.out.print("masukan banyak nilai yang diinput = ");
+        int x= scan.nextInt();
+        float[]za=new float[x];
+            float jumlah=0;
+
+            for(int i=0;i<za.length;i++){
+                System.out.print("masukan nilai ke-"+(i+1)+"=");
+                za[i]=scan.nextFloat();
+            }
+            System.out.println("\ntampilan nilai:");
+                    for(int k=0;k<za.length;k++){
+                    System.out.print(za[k]+" ;");
+                    jumlah+=za[k];
+                    }
+
+
+        //proses rata2
+        float rata2=jumlah/x;
+
+
+        System.out.println("\nnilai rata2 = "+rata2);
+    }
+
+    
 }
