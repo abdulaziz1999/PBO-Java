@@ -56,7 +56,7 @@ class Statistika{
                     int posisi=x/2;
                     System.out.println("bilangan ganjil");
                     median=nilai[posisi];
-                    System.out.print("nilai median adalah "+median);
+                    System.out.print("nilai median adalah "+median+ "\n");
                 }
     }
 

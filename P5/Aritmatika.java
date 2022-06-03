@@ -1,4 +1,6 @@
+import java.util.Scanner;
 class Aritmatika{
+    Scanner scan =new Scanner(System.in);
     // int Angka1,Angka2;
 
     // public Aritmatika(int Angka1,int Angka2){
